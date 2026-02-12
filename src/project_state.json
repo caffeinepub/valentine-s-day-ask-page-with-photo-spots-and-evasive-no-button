@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-remove-all-user-facing-ui-that-allows-adding-uploading-photos-from-the-app-including-any-add-photo-add-your-own-picture-slots-and-any-related-call-to-action-text",
+      "title": "Remove all user-facing UI that allows adding/uploading photos from the app, including any \"Add photo\" / \"Add your own picture\" slots and any related call-to-action text.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-postyesmoviedatepage-to-remove-the-photoslot-section-and-adjust-the-layout-so-the-page-remains-visually-balanced-without-a-photo-area-e-g-movie-details-can-span-full-width-or-use-an-alternative-non-upload-visual-element-that-is-not-user-editable",
+      "title": "Update PostYesMovieDatePage to remove the PhotoSlot section and adjust the layout so the page remains visually balanced without a photo area (e.g., movie details can span full width or use an alternative non-upload visual element that is not user-editable).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-valentineaskpage-to-remove-the-readonly-photoslot-grid-shown-in-the-post-acceptance-celebration-state",
+      "title": "Update ValentineAskPage to remove the readonly PhotoSlot grid shown in the post-acceptance celebration state.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-or-retire-the-photoslot-component-so-it-is-not-used-anywhere-in-the-frontend-build-delete-the-file-if-unused-or-leave-it-but-ensure-there-are-no-imports-usages",
+      "title": "Remove or retire the PhotoSlot component so it is not used anywhere in the frontend build (delete the file if unused, or leave it but ensure there are no imports/usages).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Remove all UI locations/slots where users can add/upload photos",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Remove all photo upload/add-photo UI from the Valentine flow",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

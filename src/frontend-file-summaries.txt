@@ -1,0 +1,10 @@
+{
+  "frontend/src/App.tsx": "Main application entry point that renders the ValentineAskPage component as a single-page experience.",
+  "frontend/src/components/ValentineAskPage.tsx": "Core Valentine's Day page component with multi-step flow including initial ask screen, evasive \"No\" button that cannot be clicked/tapped/keyboard-activated, celebration state with \"14 Feb\" button, and conditional rendering of PostYesMovieDatePage (photo upload functionality removed).",
+  "frontend/src/components/PhotoSlot.tsx": "Reusable photo upload component with file picker, client-side preview, and remove functionality; supports readonly mode and customizable empty-state title/description props for flexible usage across different contexts.",
+  "frontend/src/components/CelebrationOverlay.tsx": "Animated overlay component that displays floating hearts across the screen when \"Yes\" is clicked.",
+  "frontend/src/index.css": "Global styles with Valentine-themed OKLCH color system (warm pinks, reds, creams), custom font families (Inter + Playfair Display), and floating heart animation keyframes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Valentine color palette tokens, serif font family, and float-up animation for celebration effects.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are needed for this client-side only application.",
+  "frontend/src/components/PostYesMovieDatePage.tsx": "Movie date details page displaying the static movie poster image for \"Hum Aapke Hain Koun\" alongside date/time details including \"Date: 14 Feb\", \"Time: 9:00 PM\", and \"Who's Coming: Just me and you\" using Card layout with Valentine theme styling (photo upload functionality removed)."
+}

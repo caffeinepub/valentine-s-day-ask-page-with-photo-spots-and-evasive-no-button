@@ -1,0 +1,81 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-all-user-facing-ui-that-allows-adding-uploading-photos-from-the-app-including-any-add-photo-add-your-own-picture-slots-and-any-related-call-to-action-text",
+      "featureTitle": "Remove all user-facing UI that allows adding/uploading photos from the app, including any \"Add photo\" / \"Add your own picture\" slots and any related call-to-action text.",
+      "files": [
+        "frontend/src/components/PhotoSlot.tsx",
+        "frontend/src/components/PostYesMovieDatePage.tsx",
+        "frontend/src/components/ValentineAskPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-postyesmoviedatepage-to-remove-the-photoslot-section-and-adjust-the-layout-so-the-page-remains-visually-balanced-without-a-photo-area-e-g-movie-details-can-span-full-width-or-use-an-alternative-non-upload-visual-element-that-is-not-user-editable",
+      "featureTitle": "Update PostYesMovieDatePage to remove the PhotoSlot section and adjust the layout so the page remains visually balanced without a photo area (e.g., movie details can span full width or use an alternative non-upload visual element that is not user-editable).",
+      "files": [
+        "frontend/src/components/PostYesMovieDatePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-valentineaskpage-to-remove-the-readonly-photoslot-grid-shown-in-the-post-acceptance-celebration-state",
+      "featureTitle": "Update ValentineAskPage to remove the readonly PhotoSlot grid shown in the post-acceptance celebration state.",
+      "files": [
+        "frontend/src/components/ValentineAskPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-or-retire-the-photoslot-component-so-it-is-not-used-anywhere-in-the-frontend-build-delete-the-file-if-unused-or-leave-it-but-ensure-there-are-no-imports-usages",
+      "featureTitle": "Remove or retire the PhotoSlot component so it is not used anywhere in the frontend build (delete the file if unused, or leave it but ensure there are no imports/usages).",
+      "files": [
+        "frontend/src/components/PhotoSlot.tsx",
+        "frontend/src/components/PostYesMovieDatePage.tsx",
+        "frontend/src/components/ValentineAskPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

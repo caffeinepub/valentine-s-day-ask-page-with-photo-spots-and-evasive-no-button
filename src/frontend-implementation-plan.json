@@ -1,0 +1,89 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove photo upload UI from the Valentine flow",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "summary": "Remove all user-facing photo add/upload UI and any related call-to-action text so the UI cannot open an image file chooser.",
+      "acceptanceCriteria": [
+        "No page in the app shows a photo upload control, file picker trigger, or \"add/upload photo\" call-to-action text.",
+        "Users cannot click/tap anywhere in the UI to open a file chooser for images."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PostYesMovieDatePage.tsx",
+          "operation": "modify",
+          "description": "Remove the user-facing photo upload section (including \"Add your own picture\" / \"Upload a photo for our date\" text) so there is no clickable area that would open a file chooser."
+        },
+        {
+          "path": "frontend/src/components/ValentineAskPage.tsx",
+          "operation": "modify",
+          "description": "Remove any remaining photo-slot UI so there is no area in the Valentine flow that implies adding/uploading photos or triggers a file chooser."
+        },
+        {
+          "path": "frontend/src/components/PhotoSlot.tsx",
+          "operation": "delete",
+          "description": "Delete the PhotoSlot component to eliminate the underlying file input and click-to-open-file-chooser behavior from the frontend bundle."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Update PostYesMovieDatePage to remove PhotoSlot and rebalance the layout without any upload area (optionally using a non-editable visual).",
+      "acceptanceCriteria": [
+        "`frontend/src/components/PostYesMovieDatePage.tsx` no longer imports or renders `PhotoSlot`.",
+        "The movie date page renders without empty/unused space where the photo slot previously appeared.",
+        "No user-facing text remains that instructs the user to add or upload a picture."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PostYesMovieDatePage.tsx",
+          "operation": "modify",
+          "description": "Remove the PhotoSlot import/render and adjust the grid/layout to stay visually balanced (e.g., movie details span full width and/or include a static non-editable image using frontend/public/assets/generated/hum-aapke-hain-koun-poster.dim_800x1200.png)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Update ValentineAskPage to remove the readonly PhotoSlot grid from the post-acceptance celebration state.",
+      "acceptanceCriteria": [
+        "`frontend/src/components/ValentineAskPage.tsx` no longer imports or renders `PhotoSlot`.",
+        "The post-acceptance celebration view renders cleanly without the 3-slot photo grid.",
+        "All other existing interactions (Yes/No flow, celebration overlay, navigation to the movie date page) continue to work as before."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ValentineAskPage.tsx",
+          "operation": "modify",
+          "description": "Remove the PhotoSlot import and the 3-slot readonly grid from the accepted/celebration state; adjust spacing so the celebration and continue button still look intentional and the movie-date navigation continues to function."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Retire PhotoSlot so it is not used anywhere in the frontend build.",
+      "acceptanceCriteria": [
+        "There are zero remaining imports/usages of `PhotoSlot` in the frontend codebase.",
+        "The frontend builds successfully with no lint/type errors related to removed photo functionality."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PhotoSlot.tsx",
+          "operation": "delete",
+          "description": "Delete PhotoSlot now that it is no longer used, ensuring no photo functionality remains compiled into the app."
+        },
+        {
+          "path": "frontend/src/components/PostYesMovieDatePage.tsx",
+          "operation": "modify",
+          "description": "Remove any remaining references/imports of PhotoSlot after deleting the component to keep the build type-safe."
+        },
+        {
+          "path": "frontend/src/components/ValentineAskPage.tsx",
+          "operation": "modify",
+          "description": "Remove any remaining references/imports of PhotoSlot after deleting the component to keep the build type-safe."
+        }
+      ]
+    }
+  ]
+}

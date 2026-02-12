@@ -1,0 +1,90 @@
+{
+  "kind": "build_request",
+  "title": "Remove all photo upload/add-photo UI from the Valentine flow",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "text": "Remove all user-facing UI that allows adding/uploading photos from the app, including any \"Add photo\" / \"Add your own picture\" slots and any related call-to-action text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "then remove all the places where were to add photos"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No page in the app shows a photo upload control, file picker trigger, or \"add/upload photo\" call-to-action text.",
+        "Users cannot click/tap anywhere in the UI to open a file chooser for images."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Update PostYesMovieDatePage to remove the PhotoSlot section and adjust the layout so the page remains visually balanced without a photo area (e.g., movie details can span full width or use an alternative non-upload visual element that is not user-editable).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "then remove all the places where were to add photos"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/src/components/PostYesMovieDatePage.tsx` no longer imports or renders `PhotoSlot`.",
+        "The movie date page renders without empty/unused space where the photo slot previously appeared.",
+        "No user-facing text remains that instructs the user to add or upload a picture."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Update ValentineAskPage to remove the readonly PhotoSlot grid shown in the post-acceptance celebration state.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "then remove all the places where were to add photos"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/src/components/ValentineAskPage.tsx` no longer imports or renders `PhotoSlot`.",
+        "The post-acceptance celebration view renders cleanly without the 3-slot photo grid.",
+        "All other existing interactions (Yes/No flow, celebration overlay, navigation to the movie date page) continue to work as before."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Remove or retire the PhotoSlot component so it is not used anywhere in the frontend build (delete the file if unused, or leave it but ensure there are no imports/usages).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "then remove all the places where were to add photos"
+        ]
+      },
+      "acceptanceCriteria": [
+        "There are zero remaining imports/usages of `PhotoSlot` in the frontend codebase.",
+        "The frontend builds successfully with no lint/type errors related to removed photo functionality."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under `frontend/src/components/ui` (compose existing UI components only).",
+    "Do not modify files listed as immutable by the platform (e.g., `frontend/src/hooks/useInternetIdentity.ts(x)`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`).",
+    "Keep the backend as-is (no photo persistence feature should be added)."
+  ],
+  "nonGoals": [
+    "Do not implement photo storage or any backend image upload/persistence.",
+    "Do not add new authentication, database-like storage, or external services for images."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

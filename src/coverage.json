@@ -1,0 +1,80 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-12T10:29:48.728Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 4,
+    "implemented": 4,
+    "items": [
+      {
+        "id": "REQ-6",
+        "summary": "Remove all user-facing UI that allows adding/uploading photos from the app, including any \"Add photo\" / \"Add your own picture\" slots and any related call-to-action text.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/PostYesMovieDatePage.tsx",
+          "frontend/src/components/ValentineAskPage.tsx",
+          "frontend/src/components/PhotoSlot.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/PostYesMovieDatePage.tsx",
+          "frontend/src/components/ValentineAskPage.tsx",
+          "frontend/src/components/PhotoSlot.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Update PostYesMovieDatePage to remove the PhotoSlot section and adjust the layout so the page remains visually balanced without a photo area (e.g., movie details can span full width or use an alternative non-upload visual element that is not user-editable).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/PostYesMovieDatePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/PostYesMovieDatePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Update ValentineAskPage to remove the readonly PhotoSlot grid shown in the post-acceptance celebration state.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ValentineAskPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ValentineAskPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Remove or retire the PhotoSlot component so it is not used anywhere in the frontend build (delete the file if unused, or leave it but ensure there are no imports/usages).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/PhotoSlot.tsx",
+          "frontend/src/components/PostYesMovieDatePage.tsx",
+          "frontend/src/components/ValentineAskPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/PhotoSlot.tsx",
+          "frontend/src/components/PostYesMovieDatePage.tsx",
+          "frontend/src/components/ValentineAskPage.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/PhotoSlot.tsx",
+    "frontend/src/components/PostYesMovieDatePage.tsx",
+    "frontend/src/components/ValentineAskPage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods.",
+  "feature_evidence.json": "Feature evidence report listing UI-removal requirements and associated files.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose of each frontend file.",
+  "frontend/index.css": "Tailwind base and theme variable definitions for Valentine‑themed styling.",
+  "frontend/index.html": "HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Root component rendering ValentineAskPage.",
+  "frontend/src/components/CelebrationOverlay.tsx": "Animated floating‑hearts overlay component.",
+  "frontend/src/components/PhotoSlot.tsx": "Empty placeholder component file.",
+  "frontend/src/components/PostYesMovieDatePage.tsx": "Movie date confirmation page with poster, date, time, and themed styling.",
+  "frontend/src/components/ValentineAskPage.tsx": "Main Valentine ask flow with evasive 'No' button, celebration, and transition to movie date page.",
+  "frontend/src/hooks/useActor.ts": "Hook creating and refreshing a backend actor based on Internet Identity state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context and hooks for managing Internet Identity login, state, and stored identities.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder for backend queries.",
+  "frontend/src/index.css": "Defines Tailwind layers, global styles, and custom Valentine-themed OKLCH color variables for light and dark modes, plus a float-up animation.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and Internet Identity providers.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom OKLCH color tokens, Valentine theme extensions, plugins, and container settings.",
+  "project_state.json": "Stores project metadata, feature requirements, and tasks focused on removing all photo-upload UI."
+}
